@@ -38,7 +38,7 @@ class BaseETL():
         dtype=None,
     ):
         """ - df: 데이터프레임
-            - db_name: 데이터프레임
+            - db_name: 데이터베이스명
             - tb_name: 저장할 테이블명
             - dtype: 테이블에 대한 정의
             df에 저장된 데이터를 db_name.tb_name 에 insert
