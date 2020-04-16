@@ -1,4 +1,4 @@
--- SQL 2.4
+-- SQL 3.4
 WITH patients AS
 (
     SELECT st0.subject_id

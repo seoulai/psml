@@ -1,4 +1,4 @@
--- SQL 2.3
+-- SQL 3.3
 SELECT st0.subject_id
        , st0.gender
        , st0.birth_date

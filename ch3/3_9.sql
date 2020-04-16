@@ -1,4 +1,4 @@
--- SQL 2.9
+-- SQL 3.9
 WITH patients_is_sepsis AS                                                         
 (   
     SELECT st0.subject_id                                                          

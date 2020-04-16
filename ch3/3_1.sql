@@ -1,4 +1,4 @@
--- SQL 2.1
+-- SQL 3.1
 SELECT st0.subject_id
        , st0.gender
        , st0.dob AS birth_date

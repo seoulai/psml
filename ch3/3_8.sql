@@ -1,4 +1,4 @@
--- SQL 2.8
+-- SQL 3.8
 SELECT st0.*
        , st1.icd9_codes
        , CASE WHEN st1.subject_id IS NOT NULL THEN 'true' ELSE 'false' END AS is_sepsis

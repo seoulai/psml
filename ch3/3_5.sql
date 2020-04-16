@@ -1,4 +1,4 @@
--- SQL 2.5
+-- SQL 3.5
 SELECT age_group
        , gender
        , COUNT(1) AS subject_cnt
