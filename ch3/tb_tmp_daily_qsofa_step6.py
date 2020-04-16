@@ -1,7 +1,7 @@
 from base_etl import BaseETL
 from sqlalchemy import types
 
-class TbTmpDailyqSOFALog5(BaseETL):
+class TbTmpDailyqSOFAStep6(BaseETL):
 
     def run(
         self,
@@ -19,7 +19,7 @@ class TbTmpDailyqSOFALog5(BaseETL):
                            , CASE WHEN rr >= 22 THEN 1 ELSE 0 END AS rr_score
                            , CASE WHEN bp <= 100 THEN 1 ELSE 0 END AS bp_score
                            , CASE WHEN gcs < 15 THEN 1 ELSE 0 END AS gcs_score
-                      FROM tb_tmp_daily_qsofa_log4
+                      FROM tb_tmp_daily_qsofa_step5
                    ) tmp
         """
 
@@ -36,10 +36,11 @@ class TbTmpDailyqSOFALog5(BaseETL):
             'gcs_score': types.INTEGER,
             'qsofa_score': types.INTEGER,
         }
+        df.set_index(["date_id", "subject_id"])
         self.insert(df, db_name="mimic", tb_name="daily_qsofa", dtype=dtype)
 
 
 if __name__ == "__main__":
-    obj = TbTmpDailyqSOFALog5()
+    obj = TbTmpDailyqSOFAStep6()
     obj.run()
 

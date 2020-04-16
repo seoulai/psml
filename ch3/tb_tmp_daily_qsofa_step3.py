@@ -1,6 +1,6 @@
 from base_etl import BaseETL
 
-class TbTmpDailyqSOFALog2(BaseETL):
+class TbTmpDailyqSOFAStep3(BaseETL):
 
     def run(
         self,
@@ -25,10 +25,10 @@ class TbTmpDailyqSOFALog2(BaseETL):
         """
 
         df = self.df_from_sql(db_name="mimic", sql=sql)
-        self.insert(df, db_name="mimic_tmp", tb_name="tb_tmp_daily_qsofa_log2")
+        self.insert(df, db_name="mimic_tmp", tb_name="tb_tmp_daily_qsofa_step3")
 
 
 if __name__ == "__main__":
-    obj = TbTmpDailyqSOFALog2()
+    obj = TbTmpDailyqSOFAStep3()
     obj.run()
 
