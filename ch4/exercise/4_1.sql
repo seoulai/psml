@@ -1,3 +1,4 @@
+-- SQL 4.1
 -- daily_qsofa 테이블의 총 건수, qSOFA 건수(2점 이상), 정상 건수(2점 미만)를 구하고 총 건수 대비 qSOFA 건수, 정상 건수의 percentage를 구하자.
 SELECT total_cnt
        , qsofa_cnt
